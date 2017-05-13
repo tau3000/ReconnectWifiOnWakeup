@@ -6,7 +6,7 @@ device=$(networksetup -listallhardwareports | grep -A1 '^Hardware Port: Wi-Fi' |
 device=${device:-en0}
 
 if pgrep -q -f 'awakened.*networksetup'; then
-  osascript -e "display notification \"Alreadly started\" with title \"$appname\""
+  osascript -e "display notification \"Already started\" with title \"$appname\""
 else
   "$dir/awakened" /bin/sh -c "$airport -I | grep -qi 'airport: off' || (networksetup -setairportpower $device off; sleep 1; networksetup -setairportpower $device on)" &
   osascript -e "display notification \"Successfully started on device $device\" with title \"$appname\""
