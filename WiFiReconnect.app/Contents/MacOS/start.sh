@@ -1,5 +1,5 @@
 #!/bin/sh
-appname='ReconnectWifiOnWakeup'
+appname='WiFiReconnect'
 dir=$(cd $(dirname $0); pwd)
 airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
 device=$(networksetup -listallhardwareports | grep -A1 '^Hardware Port: Wi-Fi' | grep '^Device:' | head -1 | awk '{print $2}')
