@@ -6,6 +6,8 @@
     <string>start.sh</string>
     <key>CFBundleIconFile</key>
     <string>AppIcon</string>
+    <key>CFBundleIdentifier</key>
+    <string>io.github.tau3000.WiFiReconnect</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleSignature</key>
